@@ -30,3 +30,6 @@ set incsearch
 
 " Command line completion
 set wildmenu
+
+" Show matching parentheses  
+set showmatch
