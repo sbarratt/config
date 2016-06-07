@@ -38,7 +38,7 @@ set matchtime=2
 
 " For indents that consist of 4 space characters but are entered with the tab
 " key:
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
@@ -96,3 +96,7 @@ function! HasPaste()
     endif
     return ''
 endfunction
+
+" Theme
+set t_Co=256
+colorscheme wombat256
