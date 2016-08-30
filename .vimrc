@@ -142,3 +142,7 @@ endfunction
 " Theme
 set t_Co=256
 colorscheme wombat256
+
+" New Line no insert
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
