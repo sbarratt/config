@@ -1,6 +1,7 @@
 " Shane Barratt's .vimrc
 "
 " Type ':h setting' if you don't understand a setting
+"
 
 " No arrow keys allowed
 noremap <Up> <Nop>
@@ -14,6 +15,41 @@ inoremap <Right> <Nop>
 
 " Remap jj to <Esc>
 :imap jj <Esc>
+
+"===== LaTeX =====
+
+" filetype: LaTeX instead of TeX for *.tex
+let g:tex_flavor='latex'
+
+" indent: don't indent braces
+let g:tex_indent_brace=0
+
+"===== Save & Load =====
+
+" do not create *.swp files
+set noswapfile
+
+" save file before :make or switching buffers
+set autowrite
+
+" load file when it is changed externally
+set autoread
+
+"===== Indentation =====
+
+" Note -- never use smartindent
+
+" inherit indentation from previous line
+set autoindent
+
+" smartindent is deprecated in favor of cindent
+set nosmartindent
+
+" disable C-style indentation
+set nocindent
+
+" show line-number
+set number
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -30,6 +66,9 @@ filetype plugin indent on
 " Incremental searching
 set incsearch
 
+" highlight search
+set hlsearch
+
 " Command line completion
 set wildmenu
 
@@ -38,6 +77,9 @@ set showmatch
 
 " Show matching parentheses for 200ms
 set matchtime=2
+
+" 80 characters max per line
+set colorcolumn=80
 
 " For indents that consist of 4 space characters but are entered with the tab
 " key:
